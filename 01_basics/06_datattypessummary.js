@@ -27,3 +27,21 @@ const myFunction = function(){
     console.log("This is my first function")
 }
 console.log(typeof myFunction);
+
+// Memory
+// Stack(Primitive), Heap(Non-Primitive)
+let firstName = "Santhosh"
+let secondName = firstName
+secondName ="Pinisetti"
+console.log(firstName);
+console.log(secondName);
+
+
+let userOne = {
+    email:"user@gmail.com",
+    upi:"user@ybl"
+}
+let userTwo = userOne
+userTwo.email = "user@google.com"
+console.log(userOne);
+console.log(userTwo);
