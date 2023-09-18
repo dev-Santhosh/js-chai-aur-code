@@ -30,3 +30,26 @@ function loginUser(userName){
 }
 console.log(loginUser("Santhosh"));
 // If no value/argument is passed then the output is "undefined just logged in"
+function calculateCartPrice(...num3){
+    return (num3)
+}
+console.log(calculateCartPrice(200,300,400));
+// If there is only one parameter and multiple arguments then we need to use "..." in front of the parameter. This returns an array.
+const user = {
+    userName2 : "Santhosh",
+    email2 : "santhosh@google.com"
+}
+function handleObject(anyObject){
+    console.log(`The username is ${anyObject.userName2} and the price is ${anyObject.email2}`);
+}
+// handleObject(user)
+handleObject({
+    userName2 : "Santhosh",
+    email2 : "santhosh@google.com"
+})
+const newArray = [100,200,300]
+function returnSecondValue(myNewArray){
+    return myNewArray[0]
+}
+// console.log(returnSecondValue(newArray));
+console.log(returnSecondValue([100,200,300]));
