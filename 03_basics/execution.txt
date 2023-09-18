@@ -1,0 +1,55 @@
+JavaScript Execution is of two types:
+1.Global Execution Context
+2.Function Execution Context
+3.Eval Execution Context (ex: mongoose)
+JavaScript code execution is done in two phases:
+1.Memory Creation Phase => Only memeory allocation is done
+2.Execution Phase => Execution is done
+Code:
+let val1 = 10
+let val2 = 20
+(val1 , val2) => {
+    let total = val1 + val2
+    return total
+}
+let result1 = addNum(val1, val2)
+let result2 = addNum(10,2)
+1.Global Execution: 
+ First step is Global Execution and it is loacted using "this" function
+2. Memory Creation Phase:
+  In this all the variables are collected and kept in this undefined
+    val1 = undefinded
+    val2 = undefinded
+    addNum = definition
+    result1 = undefinded
+    result2 = undefinded
+3.Execution Phase:
+  val1 = 10
+  val2 = 5
+  addNum => Creates another execution context
+  In this a new variable evironment and execution thread
+  Now for addNum:
+  Memory Phase:
+  val1 = undefinded
+  val2 = undefinded
+  total = undefinded
+  Execution Phase:
+  num1 = 10
+  num2 = 5
+  total = 15
+  After the process this new execution context of addNum gets deleted.
+4.The total is returned to Global Execution context.
+5. Now the global execution context gets updated
+  val1 = 10
+  val2 = 5
+  result1 = 15 
+6. Now in last line again there is another "addNum" function so there will be another new variable evironment and execution thread.
+  1.Memory phase
+    val1 = undefinded
+    val2 = undefinded
+    total = undefinded
+  2.Execution Phase
+    num1 = 10
+    num2 = 5
+    total = 15
+7.The total is returned to Global Execution context.
