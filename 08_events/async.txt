@@ -1,0 +1,11 @@
+JavaScript is a Synchronous and Single threaded.
+Execution context:
+ executes one line of a code at a time
+ each operation waits for the last operation to complete
+ ex: console.log(1);
+     console.log(2);
+Blocking Code vs Non Blocking Code:
+Blocking Code: Block the flow of the program
+               Read file Synchronous
+Non Blocking Code: Does not block execution of code
+                   Read file async
